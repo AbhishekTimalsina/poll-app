@@ -1,0 +1,40 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-size: 62.5%;
+  font-family: "Poppins", sans-serif;
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+.container {
+  width: 60%;
+  margin: 32px auto;
+}
+.primary-heading {
+  text-align: center;
+  font-size: 3.4rem;
+  color: #4f46e5;
+}
+.message_container {
+  width: 100%;
+  font-size: 1.8rem;
+  padding: 6px 18px;
+  border-radius: 6px;
+}
+.error-message {
+  background-color: rgb(247, 213, 213);
+  color: rgb(179, 25, 35);
+}
+.success-message {
+  background-color: rgb(191, 221, 181);
+  color: rgb(6, 99, 6);
+}
+.error {
+  color: rgb(179, 25, 35);
+}

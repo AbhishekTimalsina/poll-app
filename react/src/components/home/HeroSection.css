@@ -1,0 +1,60 @@
+.hero-section_container {
+  background-image: url(../../assets/img/index-splash.jpg);
+  height: 90vh;
+  max-height: 60rem;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  border-radius: 20px;
+  width: 90%;
+  margin: 24px auto;
+  display: flex;
+  align-items: center;
+}
+.hero-section_container::after {
+  content: "";
+  background-image: linear-gradient(to right, #4338ca, #6b21a8);
+  mix-blend-mode: multiply;
+  height: 100%;
+  width: 100%;
+  display: block;
+  position: absolute;
+  z-index: 999;
+  top: 0;
+  border-radius: 20px;
+  z-index: 1;
+}
+.hero-content {
+  margin-left: 80px;
+  z-index: 2;
+}
+.hero-motto {
+  font-size: 5.2rem;
+  font-weight: 800;
+  color: white;
+}
+.hero-text {
+  font-size: 3rem;
+  font-weight: 500;
+  color: rgb(172 182 229);
+}
+.hero-btns_container {
+  margin-top: 22px;
+  display: flex;
+  gap: 22px;
+  button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 5rem;
+    width: 16rem;
+    font-size: 1.6rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  a:nth-child(1) button {
+    background-color: rgb(67 56 202);
+    color: white;
+  }
+}

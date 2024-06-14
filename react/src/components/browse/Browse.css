@@ -1,0 +1,29 @@
+.poll-list_container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.poll-list {
+  display: flex;
+  background-color: #2fa02f;
+  padding: 8px 28px 8px 50px;
+  border-radius: 20px;
+  justify-content: space-between;
+  p {
+    font-size: 1.6rem;
+  }
+  span {
+    font-size: 1.2rem;
+    position: relative;
+    margin-bottom: 2px;
+    bottom: 2px;
+    font-weight: 600;
+  }
+  span:after {
+    content: "Votes";
+    position: absolute;
+    top: 1.2rem;
+    left: -16px;
+    font-weight: 400;
+  }
+}

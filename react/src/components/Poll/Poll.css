@@ -1,0 +1,223 @@
+/* Poll.css  */
+
+.poll-container {
+  display: flex;
+  flex-direction: column;
+  padding: 24px;
+  background-color: rgb(241, 241, 241);
+  border-radius: 8px;
+  border: 1px solid rgb(223, 223, 223);
+  border-top: 5px solid rgb(224, 222, 80);
+  margin-top: 24px;
+  gap: 10px;
+}
+
+.poll-title {
+  font-size: 2.8rem;
+  font-weight: 500;
+}
+.poll-range_container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.poll-range_options {
+  font-size: 1.6rem;
+}
+.poll-range_graphics {
+  cursor: pointer;
+  border-radius: 4px;
+  border: 1px solid rgb(167, 166, 166);
+  width: 50vw;
+  height: 1.8rem;
+  position: relative;
+}
+
+.poll-range_bar {
+  display: inline-block;
+  height: 100%;
+}
+
+.poll-vote {
+  font-size: 1.4rem;
+  color: rgb(105, 105, 105);
+  position: absolute;
+  right: 2px;
+  top: -20px;
+}
+
+/* NewPollForm.jsx */
+.poll-form_container {
+  form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 24px;
+    gap: 18px;
+  }
+}
+.new-poll_question {
+  width: 100%;
+  input {
+    width: 100%;
+    font-size: 1.7rem;
+    padding: 3px 8px;
+    border-radius: 6px;
+    border: 1px solid rgb(167, 166, 166);
+    box-shadow: red;
+  }
+  input:focus {
+    outline: 2px solid rgba(44, 34, 235, 0.75);
+  }
+}
+.new-poll_options {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+
+  .options-container {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+  .options-container > div {
+    position: relative;
+  }
+  .options-container .delete-poll_btn {
+    position: absolute;
+    font-size: 1.8rem;
+    font-weight: 600;
+    top: 2px;
+    right: 6px;
+    cursor: pointer;
+    color: #a7a6a6;
+  }
+  .options-container input {
+    font-size: 1.6rem;
+    padding: 2px 26px 2px 6px;
+    border: 1px solid rgb(167, 166, 166);
+    border-radius: 4px;
+    width: 100%;
+  }
+  .options-container input:focus {
+    outline: 2px solid rgba(30, 19, 235, 0.75);
+  }
+
+  .add-opt_btn {
+    width: 120px;
+    padding: 2px 16px;
+    font-size: 1.4rem;
+    border: 1px solid rgb(167, 166, 166);
+    background-color: white;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+}
+.label {
+  display: block;
+  font-size: 2rem;
+}
+.create-poll-btn_wrapper {
+  width: 100%;
+  button {
+    cursor: pointer;
+    width: 100%;
+    padding: 8px;
+    font-size: 1.5rem;
+    font-weight: 500;
+    background-color: #4f46e5;
+    border: none;
+    border-radius: 6px;
+    color: white;
+  }
+}
+
+/* VotingPoll.jsx */
+
+.poll-options_container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  .poll-btn_container {
+    display: flex;
+    gap: 24px;
+  }
+  .result-btn {
+    background: white;
+    color: black;
+    border: 1px solid rgb(167, 166, 166);
+    cursor: pointer;
+    width: 100%;
+    padding: 8px;
+    font-size: 1.5rem;
+    font-weight: 500;
+    border-radius: 6px;
+    text-align: center;
+  }
+  p {
+    font-size: 1.8rem;
+    color: rgb(83, 83, 83);
+  }
+  button {
+    cursor: pointer;
+    width: 100%;
+    padding: 8px;
+    font-size: 1.5rem;
+    font-weight: 500;
+    background-color: #4f46e5;
+    border: none;
+    border-radius: 6px;
+    color: white;
+  }
+}
+.poll-options > div {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  label,
+  input {
+    cursor: pointer;
+    font-size: 1.8rem;
+  }
+}
+.share-link_container {
+  margin-top: 52px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  border: 1px solid rgb(167, 166, 166);
+  padding: 50px 0px;
+  border-radius: 4px;
+  background-color: rgb(241, 241, 241);
+  span {
+    width: 50%;
+    font-size: 1.8rem;
+  }
+  div {
+    width: 50%;
+    min-width: fit-content;
+    border: 1px solid rgb(167, 166, 166);
+    border-radius: 4px;
+    padding: 6px 12px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    .link-txt {
+      font-size: 1.6rem;
+    }
+    .copy-btn {
+      padding-left: 4px;
+      border: none;
+      border-left: 1px solid black;
+      font-size: 1.4rem;
+      cursor: pointer;
+    }
+  }
+}
+
+.disabled {
+  opacity: 0.6;
+  cursor: progress !important;
+}

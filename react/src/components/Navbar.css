@@ -1,0 +1,30 @@
+.nav-container {
+  /* position: fixed; */
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 40px;
+}
+.nav-logo {
+  a {
+    font-size: 2.6rem;
+  }
+}
+.nav-link_container {
+  display: flex;
+  gap: 22px;
+  align-items: center;
+  li a {
+    font-size: 2rem;
+  }
+  li:last-child {
+    background-color: #4338ca;
+    padding: 4px 12px;
+    border-radius: 6px;
+    a {
+      color: white;
+    }
+  }
+}
