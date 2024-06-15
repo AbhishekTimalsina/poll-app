@@ -9,7 +9,9 @@ function PollResult() {
   const { data, isPending, error, isError } = useQuery({
     queryKey: ["poll", pollId],
     queryFn: () =>
-      fetch("http://localhost:3000/poll/" + pollId).then((res) => res.json()),
+      fetch(`${process.env.SERVER_URL}/poll/${pollID}`).then((res) =>
+        res.json()
+      ),
   });
 
   // Seeded random number generator

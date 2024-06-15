@@ -12,12 +12,14 @@ function VotingPoll() {
   const { data, isPending, error, isError } = useQuery({
     queryKey: ["poll", pollId],
     queryFn: () =>
-      fetch("http://localhost:3000/poll/" + pollId).then((res) => res.json()),
+      fetch(`${process.env.SERVER_URL}/poll/${pollId}`).then((res) =>
+        res.json()
+      ),
   });
 
   const mutation = useMutation({
     mutationFn: (pollId) => {
-      return fetch("http://localhost:3000/poll/" + pollId, {
+      return fetch(`${process.env.SERVER_URL}/poll/${pollId}`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

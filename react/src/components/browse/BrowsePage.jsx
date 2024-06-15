@@ -7,7 +7,7 @@ function BrowsePage() {
   const { data, isPending, error, isError } = useQuery({
     queryKey: ["poll"],
     queryFn: () =>
-      fetch("http://localhost:3000/poll/").then((res) => res.json()),
+      fetch(`${process.env.SERVER_URL}/poll/`).then((res) => res.json()),
   });
 
   if (isError)

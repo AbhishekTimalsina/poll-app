@@ -12,7 +12,7 @@ function NewPollForm() {
 
   const mutation = useMutation({
     mutationFn: () => {
-      return fetch("http://localhost:3000/poll/", {
+      return fetch(`${process.env.SERVER_URL}/poll/`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
