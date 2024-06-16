@@ -43,6 +43,9 @@ router.post("/poll/:id", async (req, res) => {
   try {
     let blogData = await Poll.findById(id);
     console.log(req.ip);
+    const clientIp =
+      req.headers["x-forwarded-for"] || req.connection.remoteAddress;
+    console.log(clientIp);
     if (blogData.voters.includes(req.ip)) {
       res.send({ error: "You or someone from your wifi has already voted" });
       return;
