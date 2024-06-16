@@ -86,15 +86,17 @@ function VotingPoll() {
 }
 
 function ShareLink() {
+  let { pollId } = useParams();
+
   function handleCopyToClip() {
-    navigator.clipboard.writeText(location.href);
+    navigator.clipboard.writeText(`${window.location.origin}/poll/${pollId}`);
   }
 
   return (
     <div className="share-link_container">
       <span>Share the link</span>
       <div>
-        <p className="link-txt">{window.location.href}</p>
+        <p className="link-txt">{`${window.location.origin}/poll/${pollId}`}</p>
         <button className="copy-btn" onClick={handleCopyToClip}>
           Copy
         </button>
