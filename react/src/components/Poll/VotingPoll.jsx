@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import Message from "../Message";
 import { useParams } from "react-router-dom";
 import { useMutation, useQuery } from "@tanstack/react-query";
+import baseURL from "../../utils/baseURL";
 
 function VotingPoll() {
   const [selectedOption, setSelectedOption] = useState("");
@@ -11,15 +12,12 @@ function VotingPoll() {
 
   const { data, isPending, error, isError } = useQuery({
     queryKey: ["poll", pollId],
-    queryFn: () =>
-      fetch(`${process.env.SERVER_URL}/poll/${pollId}`).then((res) =>
-        res.json()
-      ),
+    queryFn: () => fetch(`${baseURL}/${pollId}`).then((res) => res.json()),
   });
 
   const mutation = useMutation({
     mutationFn: (pollId) => {
-      return fetch(`${process.env.SERVER_URL}/poll/${pollId}`, {
+      return fetch(`${baseURL}/${pollId}`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

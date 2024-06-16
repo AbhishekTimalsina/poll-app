@@ -1,13 +1,13 @@
 import React from "react";
 import { useQuery } from "@tanstack/react-query";
 import { Link } from "react-router-dom";
+import baseURL from "../../utils/baseURL";
 import "./Browse.css";
-
+console.log(baseURL);
 function BrowsePage() {
   const { data, isPending, error, isError } = useQuery({
     queryKey: ["poll"],
-    queryFn: () =>
-      fetch(`${process.env.SERVER_URL}/poll/`).then((res) => res.json()),
+    queryFn: () => fetch(baseURL).then((res) => res.json()),
   });
 
   if (isError)

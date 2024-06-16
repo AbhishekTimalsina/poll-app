@@ -1,6 +1,6 @@
 import { useParams } from "react-router-dom";
 import { useQuery } from "@tanstack/react-query";
-
+import baseURL from "../../utils/baseURL";
 import "./Poll.css";
 
 function PollResult() {
@@ -8,10 +8,7 @@ function PollResult() {
 
   const { data, isPending, error, isError } = useQuery({
     queryKey: ["poll", pollId],
-    queryFn: () =>
-      fetch(`${process.env.SERVER_URL}/poll/${pollID}`).then((res) =>
-        res.json()
-      ),
+    queryFn: () => fetch(`${baseURL}/${pollID}`).then((res) => res.json()),
   });
 
   // Seeded random number generator

@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./Poll.css";
 import Message from "../Message";
+import baseURL from "../../utils/baseURL";
 import { useMutation } from "@tanstack/react-query";
 
 function NewPollForm() {
@@ -12,7 +13,7 @@ function NewPollForm() {
 
   const mutation = useMutation({
     mutationFn: () => {
-      return fetch(`${process.env.SERVER_URL}/poll/`, {
+      return fetch(baseURL, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
