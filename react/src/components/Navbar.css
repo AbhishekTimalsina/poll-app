@@ -1,7 +1,4 @@
 .nav-container {
-  /* position: fixed; */
-  top: 0;
-  left: 0;
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -16,6 +13,9 @@
   display: flex;
   gap: 22px;
   align-items: center;
+  a.active {
+    border-bottom: 1px solid black;
+  }
   li a {
     font-size: 2rem;
   }
@@ -26,5 +26,24 @@
     a {
       color: white;
     }
+  }
+}
+
+@media (max-width: 900px) {
+  .nav-logo a {
+    font-size: clamp(2rem, 3vw, 2.4rem);
+  }
+  .nav-link_container {
+    gap: 10px;
+  }
+  .nav-link_container li a {
+    font-size: clamp(1.5rem, 2.5vw, 1.8rem);
+  }
+}
+@media (max-width: 500px) {
+  .nav-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
   }
 }

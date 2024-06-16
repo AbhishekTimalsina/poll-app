@@ -38,3 +38,12 @@ a {
 .error {
   color: rgb(179, 25, 35);
 }
+@media (max-width: 900px) {
+  .primary-heading {
+    font-size: 3rem;
+  }
+  .container {
+    width: 80%;
+    margin: 10px auto;
+  }
+}

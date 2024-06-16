@@ -221,3 +221,23 @@
   opacity: 0.6;
   cursor: progress !important;
 }
+
+/* ******* */
+@media (max-width: 900px) {
+  .poll-options_container .poll-btn_container {
+    gap: 10px;
+  }
+  .share-link_container div {
+    padding: 3px 6px;
+    min-width: auto;
+    width: auto;
+    .link-txt {
+      width: auto;
+      text-wrap: wrap;
+      font-size: clamp(0.8rem, 2vw, 1.2rem);
+    }
+  }
+  .poll-range_graphics {
+    width: 100%;
+  }
+}

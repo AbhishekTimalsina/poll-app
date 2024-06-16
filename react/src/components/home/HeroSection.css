@@ -2,6 +2,7 @@
   background-image: url(../../assets/img/index-splash.jpg);
   height: 90vh;
   max-height: 60rem;
+  min-height: 400px;
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
@@ -56,5 +57,27 @@
   a:nth-child(1) button {
     background-color: rgb(67 56 202);
     color: white;
+  }
+}
+
+/* ********** */
+
+@media (max-width: 900px) {
+  .hero-content {
+    margin-left: 40px;
+  }
+  .hero-motto {
+    font-size: clamp(3.2rem, 6vw, 4.2rem);
+  }
+  .hero-text {
+    font-size: clamp(1.8rem, 3vw, 2.2rem);
+  }
+  .hero-btns_container {
+    flex-wrap: wrap;
+    gap: 14px;
+  }
+  .hero-btns_container button {
+    font-size: 1.4rem;
+    width: 12rem;
   }
 }
