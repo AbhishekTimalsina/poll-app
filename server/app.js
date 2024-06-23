@@ -2,11 +2,15 @@ const express = require("express");
 const app = express();
 const cors = require("cors");
 const mongoose = require("mongoose");
+const { job } = require("./cron.js");
 
 const pollRoute = require("./routes/poll");
 
 const PORT = 3000 || process.env.PORT;
 const MONGODB_URI = process.env.MONGODB_URI;
+
+job.start();
+
 
 app.use(
   cors({
